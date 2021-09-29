@@ -1,6 +1,6 @@
 
 // querySelector
-const day = document.querySelector("h1#clock");
+const day = document.querySelector("h2#clock");
 //
 
 // get time using date

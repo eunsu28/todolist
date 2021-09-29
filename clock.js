@@ -1,5 +1,5 @@
 // querySelector
-const clock = document.querySelector("h1#clock");
+const clock = document.querySelector("h2#clock");
 //
 
 // get time using data.getHours / getMinutes / getSeconds
