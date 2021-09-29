@@ -1,6 +1,6 @@
 
 // querySelector
-const clock = document.querySelector("h1#clock");
+const day = document.querySelector("h1#clock");
 //
 
 // get time using date
@@ -9,13 +9,12 @@ function getDay() {
     const month = String(date.getMonth()).padStart(2, "0");
     const day = String(date.getDay()).padStart(2, "0");
     const year = String(date.getFullYear());
-    console.log("day changed")
-    clock.innerText = (`${month}/${day}/${year}`);
+    day.innerText = (`${month}/${day}/${year}`);
 }
 //
 
 //start
 getDay();
-setInterval(getDay, 86400000);
+setInterval(getDay, 1000);
 // setInterval(function, milli second)
 // set Timeout
