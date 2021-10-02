@@ -3,7 +3,7 @@
 const MDY = document.querySelector("h2#day");
 //
 
-// get time using date
+// get date
 function getDay() {
     const date = new Date();
     const month = String((date.getMonth()) + 1).padStart(2, "0");
