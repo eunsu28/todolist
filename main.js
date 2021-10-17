@@ -1,8 +1,8 @@
 const input = document.querySelector("#input-place");
-const inputButton = document.querySelector("#input-button")
 
-function submit(){
+function aSubmit(event){
+    event.preventDefault();
     console.log("submit")
 }
 
-input.addEventListener("submit", submit);
+input.addEventListener("submit", aSubmit);
