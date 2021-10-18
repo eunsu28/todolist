@@ -1,8 +1,10 @@
-const input = document.querySelector("#input-place");
+const form = document.querySelector("#input-place");
+const input = form.querySelector("input")
 
 function aSubmit(event){
     event.preventDefault();
-    console.log("submit")
+    const newTodo = input.value;
+    input.value = "";
 }
 
-input.addEventListener("submit", aSubmit);
+form.addEventListener("submit", aSubmit);
