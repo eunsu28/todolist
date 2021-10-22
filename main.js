@@ -1,10 +1,14 @@
 const form = document.querySelector("#input-place");
 const input = form.querySelector("input")
 
+function addTodo(todo){
+    console.log(todo)
+}
+
 function aSubmit(event){
     event.preventDefault();
     const newTodo = input.value;
-    console.log(newTodo)
+    addTodo(newTodo)
     input.value = "";
 }
 
