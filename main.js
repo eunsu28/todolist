@@ -2,8 +2,12 @@ const form = document.querySelector("#input-place");
 const input = form.querySelector("input")
 const indexLi = document.getElementById("todo-list");
 
-function delate(){
-    console.log("delate")
+let toDos = [];
+
+function delate(event){
+    const li = event.target.parentElement;
+    li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
 }
 
 function addTodo(todo){
@@ -12,7 +16,7 @@ function addTodo(todo){
     const span = document.createElement("span");
     span.innerText = todo.text;
     const button = document.createElement("button")
-    button.innerText = "❌"
+    button.innerText = "❌🤬"
     button.addEventListener("click", delate);
     li.appendChild(span);
     li.appendChild(button);
