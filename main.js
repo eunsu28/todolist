@@ -16,7 +16,7 @@ function addTodo(todo){
     const span = document.createElement("span");
     span.innerText = todo.text;
     const button = document.createElement("button")
-    button.innerText = "❌🤬"
+    button.innerText = "❌"
     button.addEventListener("click", delate);
     li.appendChild(span);
     li.appendChild(button);
