@@ -4,10 +4,15 @@ const indexLi = document.getElementById("todo-list");
 
 let toDos = [];
 
+function saveToDos(){
+    localStorage.setItem("todos", JSON.stringify(toDos));
+}
+
 function delate(event){
     const li = event.target.parentElement;
     li.remove();
-    // toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos()
 }
 
 function addTodo(todo){
@@ -31,7 +36,21 @@ function aSubmit(event){
         text: newTodo,
         id: Date.now()
     }
-    addTodo(TI)
+    toDos.push(TI);
+    addTodo(TI);
+    saveToDos();
 }
 
 form.addEventListener("submit", aSubmit);
+
+// get todos from local storage
+const savedToDos = localStorage.getItem("todos");
+//
+
+// wow
+if(savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach(addTodo);
+}
+//
