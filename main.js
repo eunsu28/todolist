@@ -43,14 +43,10 @@ function aSubmit(event){
 
 form.addEventListener("submit", aSubmit);
 
-// get todos from local storage
 const savedToDos = localStorage.getItem("todos");
-//
 
-// wow
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(addTodo);
 }
-//
