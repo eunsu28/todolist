@@ -10,9 +10,7 @@ function showNotification(){
 console.log(Notification.permission);
 
 if(Notification.permission === "granted") {
-    if(time.innerText === "06:00:00") {
-        showNotification()
-    }
+    setInterval(showNotification, "500000")
 } else if (Notification.permission === "denied") {
     Notification.requestPermission().then(permission => {
         console.log(permission)
