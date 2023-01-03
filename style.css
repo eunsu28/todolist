@@ -2,6 +2,7 @@ body {
     background-color: rgb(48, 47, 47);
     text-align: center;
     font-family: cursive;
+    color: rgb(139, 137, 137);
 }
 
 h2, input, li, button {
