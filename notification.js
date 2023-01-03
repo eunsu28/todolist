@@ -1,5 +1,3 @@
-const time = document.querySelector("#clock")
-
 function showNotification(){
     const notification = new Notification("check your todo list", {
         body: "holololo"
